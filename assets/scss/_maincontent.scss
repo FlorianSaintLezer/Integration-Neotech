@@ -1,0 +1,174 @@
+main {
+    padding: $padSection;
+    @extend %container;
+    // TOP ADVERTISEMENT
+    &>:first-child {
+        width: fit-content;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        &>figure>img {
+          @extend %imgfluid;    
+        }
+    }
+    &>:nth-child(2) { //MAIN CONTENT TOP
+        @include flex(row, space-between, center, nowrap);
+        &>:nth-child(1) { //TOP LEFT
+            &>div { //BIG POSTS LIST
+                @include flex(column, center, left, nowrap);
+                &>div { //BIG POST
+                    @include flex(row, flex-start, center, nowrap);
+                    height: 200px;
+                    margin-bottom: $mBotG;
+                    &>:first-child { //PICTURE
+                        height: 100%;
+                        width: 300px;
+                        &>img { 
+                            height: 100%;   
+                            width: 100%;
+                        }   
+                    }
+                    &>:nth-child(2) { //TEXT
+                        padding: 3%;
+                        height: 100%;
+                        width: 500px;
+                        @include flex (column, space-around, left, nowrap);
+                        &>:first-child { //TITLE
+                            @extend %spanMin;
+                        }
+                        &>:nth-child(2) { // SUBTITLE
+                            @extend %spanPlus;
+                        }
+                        &>:nth-child(3) { //DATE
+                            color: $cMidMin;
+                        }
+                    }
+                }
+            }
+        }
+        &>:nth-child(2) { //TOP RIGHT
+            width: 300px;
+            @include flex(column, space-between, flex-end, nowrap);
+            &>:first-child { //popular posts
+                &>:nth-child(2) { // post list
+                    @include flex(column, space-between, flex-end, nowrap);
+                    &>div { //POST
+                        @include flex(row, flex-start, top, nowrap);
+                        width: 300px;
+                        height: 60px;
+                        position: relative;
+                        margin-bottom: 10px;
+                        &>:first-child { //PICTURE
+                            height: 100%;
+                            width: 60px;
+                        }
+                        &>:nth-child(2) { //TEXT
+                            padding-left:10px;
+                            @extend %spanMin;
+                        }
+                        &>:last-child { //NUMBER CIRCLE
+                            @extend %absoluteLeft;
+                            background-color: $cTitle;
+                            color: $cLight;
+                            border: $border;
+                            @extend %spanMin;
+                            padding: 10px 14px;
+                            border-radius: 20px;
+                            margin-left: -20px;
+                        }
+                    }
+                }
+            }
+            &>:nth-child(2) { //SECTION LINKS (RIGHT)
+            @include flex(column, space-between, center, nowrap);
+                &>:nth-child(1) { //NEWSLETTER BOX
+                    border: $border;
+                    height: 200px;
+                    &>form { //FORM
+                        height: 90%;
+                        @extend %container;
+                        @include flex(column, center, flex-start, nowrap);
+                        &>:first-child { //TEXT
+                            padding: $padTitle;
+                            @extend %spanMin;
+                        }
+                        &>:nth-child(2) { //INPUT
+                            width: 90%;
+                            padding: 10px;
+                            margin-bottom: 5px;
+                            border: $border;
+                            background-color: $cMidPlus;
+
+                        }
+                        &>:last-child { //BUTTON
+                            @extend %mainButton;
+                        }
+                    }
+                }
+                &>:nth-child(2) { //Network
+                    width: 100%;
+                    
+                    &>:not(:first-child) {
+                        display: block;
+                        padding: $padInput;
+                        border-radius: 5px;
+                        margin-bottom: $mBotG;
+                        color: $cLight;
+                    }
+                    &>:nth-child(2) { //FACEBOOK
+                        background-color: $cNetFb;    
+                    }
+                    &>:nth-child(3) { //TWITTER
+                        background-color:$cNetTw;
+                    }
+                    &>:nth-child(4) { //GOOGLE+
+                        background-color:$cNetGp;
+                    }
+                    &>:nth-child(5) { //INSTAGRAM
+                        background-color: $cNetIg;
+                    }
+                }
+            }
+
+        }
+    }
+    &>:nth-child(3) { //LATEST VIDEOS
+        &>:nth-child(2) { //CONTENT
+            @include flex(row, space-between, center, nowrap);
+            &>:first-child { //BIG VIDEO
+                display: block;
+                width: 800px;
+                height: 450px;
+            }
+            &>:nth-child(2) { // VIDEO THUMBNAILS
+                width: 300px;
+                height: 450px;
+                @include flex(column, space-between,left, nowrap);
+                &>div { //VIDEO
+                    padding-bottom: 10px;;
+                    @include flex(row, space-between, top, nowrap);
+                    &>:first-child { //PICTURE
+                        height: 80px;
+                        width: 80px;
+                        &>img {
+                            width: 80px;
+                            height: 100%;
+                        }
+                    }
+                    &>:nth-child(2) { //TITLE
+                        padding-left: 10px;
+                        @extend %spanMin;   
+                    }
+                }
+            }
+        }
+    }
+    // BOTTOM ADVERTISEMENT
+    &>:last-child {
+        width: fit-content;
+        margin: 0 auto;
+        padding-top: 30px;
+        &>figure>img {
+          @extend %imgfluid;    
+        }
+    }
+}

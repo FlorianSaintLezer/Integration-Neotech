@@ -1,0 +1,21 @@
+// MIXIN FLEX
+
+@mixin flex($fdir, $justc, $alit, $fwrap) {
+    display: flex;
+    flex-direction: $fdir;
+    justify-content: $justc;
+    align-items: $alit;
+    flex-wrap: $fwrap;
+
+}
+
+// @mixin font($ffam, $fweight, $fsize, $lspace: 0) { //0 = valeur par défaut
+//     font-family: $ffam;
+//     font-weight: $fweight;
+//     font-size: $fsize;
+//     letter-spacing: $lspace;
+// }
+
+
+
+// AVEC @INCLUDE()

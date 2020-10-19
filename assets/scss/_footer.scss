@@ -1,0 +1,62 @@
+footer {
+    position: relative;
+    padding: $padSection;
+    color: $cLight;
+    height: 50vh;
+    background-color: $cTheme;
+    font-size: .9rem;
+    line-height: 1.5rem;
+    &>:first-child { //menu bottom
+        @extend %container;
+        @include flex(row, space-between, flex-start, nowrap);
+        &>div {
+            width: 250px;
+            &>:first-child {
+                padding-bottom: 15px;
+            }
+        }
+        &>div:not(:last-child) {
+            &>:nth-child(3) {
+                padding: 20px 0;
+            }
+        }
+        &>:first-child {
+            &>ul {
+                list-style: none;
+                @include flex(row, flex-start, center, nowrap);
+                &>li {
+                    color: $cLight;
+                    padding-right: 10px;
+                }
+            }
+        }
+        &>:last-child { //subscribe
+            &>*:not(:first-child) {
+                margin-bottom: 10px;
+            }
+            & input { //Input
+                padding: 7px;
+                border-radius: 5px;
+                border: 1px $cMidMin solid;
+                background-color: $cLight;
+            }
+            & input:last-child { //Button
+                @extend %mainButton;
+            }
+
+        }
+        
+        
+    }
+    &>:last-child {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background-color: $cThemeDark;
+        padding: $padSection;
+        & p {
+            text-align: center;
+        }
+    }
+
+}

@@ -1,0 +1,63 @@
+header {
+    &>:first-child { // NAV BACKGROUND
+        height: 70px;
+        background-color: $cTheme;
+        width: 100%;
+        &>nav { //TOP MENU
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            color: $cLight;
+            @include flex(row, space-between, center, nowrap);
+            &>ul:nth-child(1) { // LEFT
+                text-transform: uppercase;
+                @extend %spanMin;
+                width: 60%;
+                list-style: none;
+                @include flex(row, space-between, center, nowrap);        
+            }
+            &>ul:nth-child(2) { //RIGHT
+                list-style: none;
+                width: 30%;
+                @include flex(row, flex-end, center, nowrap);
+                &>li:not(:last-child) { //NETWORKS
+                    margin-right: 20px;
+                }
+                &>li:last-child {
+                    margin-left: 20px;
+                }
+                &>li ::placeholder {
+                   color: $cLight;
+                   font-weight: 700;
+                }
+            }
+                
+        }
+    }
+    &>:nth-child(2) { //BIG PICTURES
+        @include flex (row, center, flex-start, nowrap);
+        overflow: hidden;
+        &>figure {
+            min-height: 100%;
+            position: relative;
+            &>div {
+                width: 100%;
+                position: absolute;
+                left: 50%;
+                top: 70%;
+                transform: translate(-50%, 0);;
+                text-align: center;
+                &>button {
+                    @extend %mainButton;
+                    text-transform: uppercase;
+                }
+                &>p {
+                    width: 100%;
+                    font-size: 2.5rem;
+                    color: $cLight;
+                }
+            }
+        }
+    } 
+}
+

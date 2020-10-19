@@ -1,0 +1,37 @@
+// COLORS
+    // FONT COLOR
+        $cTitle: rgba(224, 41, 39, 1);
+        $cDark: rgba(75, 75, 75, 1);
+        $cMidMin: rgba(208, 208, 208, 1);
+        $cMidPlus: rgba(245,245,245, 1);
+        $cLight: #fff;
+    // BACKGROUND COLOR 
+        $cTheme: rgba(0, 40, 75, 1);
+        $cThemeDark: rgba(1, 16, 33, 1);
+    //BUTTON
+        $cBtn1: rgba(247, 79, 101, 1);
+        $cBtn2: rgba(246, 135, 100, 1);
+    //NETWORK
+        $cNetFb:rgba(52, 82, 139, 1);
+        $cNetTw:rgba(88, 175, 237, 1);
+        $cNetGp:rgba(221, 75, 61, 1);
+        $cNetIg:rgba(192, 51, 130, 1);
+
+//BORDER
+    // RADIUS
+        $brad:5px;
+    // BORDER
+        $border: rgba(208, 208, 208, 1) 1px solid;
+
+
+// PADDING & MARGING
+    $padSection: 30px 0; // Section
+    $padTitle: 0 0 15px 0; // Title
+    $padBtn: 8px 35px; // Button
+    $padInput: 10px; // Input
+    $mBotG: 10px;
+
+
+// TRANSITIONS 
+    $trAll: all 400;
+    $trCol: color 400;

@@ -1,0 +1,66 @@
+// CONTENT WIDTH 90%
+    %container {
+        width: 90%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+// POSITION
+    %absoluteCenter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    %absoluteLeft {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translate(0, -50%);  
+    }
+// IMAGE FLUID
+    %imgfluid {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;  
+    }
+// BUTTON
+    %mainButton {
+        padding: $padBtn;
+        font-weight: 800;
+        background: linear-gradient(to right, $cBtn1, $cBtn2);
+        color: $cLight;
+        border: $border;
+        border-radius: $brad;
+    }
+// INPUT
+    %inputLight {
+        padding: $padInput;
+        background-color: $cLight;
+        border: $border;
+        border-radius: $brad;
+        color: $cDark;
+    }
+    %inputDark {
+        padding: $padInput;
+        background-color: $cMidPlus;
+        border: $border;
+        border-radius: $brad;
+        color: $cDark;
+    }
+    %inputTransp {
+        padding: $padInput;
+        background-color: transparent;
+        border: none;
+        border-radius: $brad;
+        color: $cLight;
+    }
+// FONT
+    %spanMin {
+        font-weight: 700;
+        font-size: .9rem;    
+    }
+    %spanPlus {
+        font-weight: 700;
+        font-size: 1.1rem;    
+    }
